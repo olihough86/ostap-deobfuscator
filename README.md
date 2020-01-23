@@ -2,7 +2,7 @@
 Tool to deobfuscate ostap JSE
 
 ## Usage
-copy the raw JSE from the document and save it as plain text
+copy the raw JSE from the document and save it as plain text  
 *go run main.go <file-with-jse.txt>*
 
 ## Example

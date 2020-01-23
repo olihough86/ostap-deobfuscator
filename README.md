@@ -14,4 +14,4 @@ MS Word:This file is in use by another application or user. fromCharCodeWScriptA
 ```
 ## Note
 The math performed while calculating the array indexes can change which will cause the script to fail,  
-but the over all priciple remains the same. A later release will attempt to detect this.
+but the over all principle remains the same. A later release will attempt to detect this.

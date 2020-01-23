@@ -21,7 +21,7 @@ func main() {
 
 	println("Tool to deobfuscate ostap JSE - Oliver Hough (@olihough86)")
 
-	var re = regexp.MustCompile(`(?m)this\['([^']*)']=2100;`)
+	var re = regexp.MustCompile(`(?m)this\['([^']*)']=2100;`) //2100 may change
 	tfile := os.Args[1]
 	content, err := ioutil.ReadFile(tfile)
 	if err != nil {
@@ -32,7 +32,7 @@ func main() {
 
 	fmt.Println("Found possible array identifier: " + a[1])
 
-	re = regexp.MustCompile(`(?m)\[` + a[1] + `-\(` + a[1] + `\/3\)\]=([^;]+)`)
+	re = regexp.MustCompile(`(?m)\[` + a[1] + `-\(` + a[1] + `\/3\)\]=([^;]+)`) // identifier-(identifier/3) may change simply update the regex
 	b := re.FindAllStringSubmatch(str, -1)
 	for i := range b {
 		v, _ := strconv.Atoi(b[i][1])
